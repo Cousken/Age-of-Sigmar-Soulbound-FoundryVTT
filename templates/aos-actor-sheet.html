@@ -1,0 +1,203 @@
+<form class="{{cssClass}}" autocomplete="off">
+
+    <header class="sheet-header">
+        <div class="avatar">
+            <img id="avatar" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
+            <div class="roll">
+                <input name="dice" type="text" value="1" data-dtype="Number"/>
+                <b>DN</b>
+                <input name="difficulty" type="text" value="1" data-dtype="Number"/>
+                <b>:</b>
+                <input name="complexity" type="text" value="1" data-dtype="Number"/>
+                <div class="button">ROLL !</div>
+            </div>
+        </div>
+        <div class="bio">
+            <div class="name">
+                <b>Character Name</b>
+                <input name="name" type="text" value="{{actor.name}}">
+            </div>
+            <div class="archetype">
+                <b>{{data.bio.archetype.label}}</b>
+                <input name="data.bio.archetype.value" type="text" value="{{data.bio.archetype.value}}"/>
+            </div>
+            <div class="species">
+                <b>{{data.bio.species.label}}</b>
+                <input name="data.bio.species.value" type="text" value="{{data.bio.species.value}}"/>
+            </div>
+            <div class="age">
+                <b>{{data.bio.age.label}}</b>
+                <input name="data.bio.age.value" type="text" value="{{data.bio.age.value}}"/>
+            </div>
+            <div class="eyes">
+                <b>{{data.bio.eyes.label}}</b>
+                <input name="data.bio.eyes.value" type="text" value="{{data.bio.eyes.value}}"/>
+            </div>
+            <div class="hair">
+                <b>{{data.bio.hair.label}}</b>
+                <input name="data.bio.hair.value" type="text" value="{{data.bio.hair.value}}"/>
+            </div>
+            <div class="height">
+                <b>{{data.bio.height.label}}</b>
+                <input name="data.bio.height.value" type="text" value="{{data.bio.height.value}}"/>
+            </div>
+            <div class="weight">
+                <b>{{data.bio.weight.label}}</b>
+                <input name="data.bio.weight.value" type="text" value="{{data.bio.weight.value}}"/>
+            </div>
+            <div class="distinguishing-features">
+                <b>{{data.bio.distinguishing-features.label}}</b>
+                <input name="data.bio.distinguishing-features.value" type="text" value="{{data.bio.distinguishing-features.value}}"/>
+            </div>
+            <div class="xp">
+                <b>{{data.bio.xp.label}}</b>
+                <input name="data.bio.xp.value" type="text" value="{{data.bio.xp.value}}"/>
+            </div>
+        </div>
+    </header>
+
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="main">MAIN</a>
+        <a class="item" data-tab="combat">COMBAT</a>
+        <a class="item" data-tab="talent">TALENT</a>
+        <a class="item" data-tab="gear">GEAR</a>
+    </nav>
+
+    <section class="sheet-body">
+
+        <div class="tab" data-group="primary" data-tab="main">
+            <div class="main">
+                <div class="attributes">
+                    <div class="body">
+                        <b>{{data.attributes.body.label}}</b>
+                        <input name="data.attributes.body.value" type="text" value="{{data.attributes.body.value}}" data-dtype="Number"/>
+                    </div>
+                    <div class="mind">
+                        <b>{{data.attributes.mind.label}}</b>
+                        <input name="data.attributes.mind.value" type="text" value="{{data.attributes.mind.value}}" data-dtype="Number"/>
+                    </div>
+                    <div class="soul">
+                        <b>{{data.attributes.soul.label}}</b>
+                        <input name="data.attributes.soul.value" type="text" value="{{data.attributes.soul.value}}" data-dtype="Number"/>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div class="skills-left">
+                        <div class="skill">
+                            <b class="name">Name</b>
+                            <b class="training">Training</b>
+                            <b class="focus">Focus</b>
+                        </div>
+                        {{#each data.skills as |skill|}}
+                            {{#if skill.isLeft}}
+                            <div class="skill">
+                                <span>{{skill.label}}</span>
+                                <div><input name="{{skill}}.training" type="text" value="{{skill.training}}" data-dtype="Number"/></div>
+                                <div><input name="{{skill}}.focus" type="text" value="{{skill.focus}}" data-dtype="Number"/></div>
+                            </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                    <div class="skills-right">
+                        <div class="skill">
+                            <b class="name">Name</b>
+                            <b class="training">Training</b>
+                            <b class="focus">Focus</b>
+                        </div>
+                        {{#each data.skills as |skill|}}
+                            {{#if skill.isRight}}
+                            <div class="skill">
+                                <span>{{skill.label}}</span>
+                                <div><input name="{{skill}}.training" type="text" value="{{skill.training}}" data-dtype="Number"/></div>
+                                <div><input name="{{skill}}.focus" type="text" value="{{skill.focus}}" data-dtype="Number"/></div>
+                            </div>
+                            {{/if}}
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="combat">
+            <div class="combat">
+                <div class="wrapper">
+                    <div class="resources">
+                        <div class="toughness">
+                            <b>{{data.combat-abilities.toughness.label}}</b>
+                            <span>
+                            <input name="data.combat-abilities.toughness.value" type="text" value="{{data.combat-abilities.toughness.value}}" data-dtype="Number"/>
+                            /
+                            <input name="data.combat-abilities.toughness.max" type="text" value="{{data.combat-abilities.toughness.max}}" data-dtype="Number"/>
+                        </span>
+                        </div>
+                        <div class="mettle">
+                            <b>{{data.combat-abilities.mettle.label}}</b>
+                            <span>
+                            <input name="data.combat-abilities.mettle.value" type="text" value="{{data.combat-abilities.mettle.value}}" data-dtype="Number"/>
+                            /
+                            <input name="data.combat-abilities.mettle.max" type="text" value="{{data.combat-abilities.mettle.max}}" data-dtype="Number"/>
+                        </span>
+                        </div>
+                        <div class="wounds">
+                            <b>{{data.wounds.label}}</b>
+                            <span>
+                            <input name="data.wounds.value" type="text" value="{{data.wounds.value}}" data-dtype="Number"/>
+                            /
+                            <input name="data.wounds.max" type="text" value="{{data.wounds.max}}" data-dtype="Number"/>
+                        </span>
+                        </div>
+                    </div>
+                    <div class="combat-abilities">
+                        <div class="combat-ability">
+                            <div class="melee">
+                                <b>{{data.combat-abilities.melee.label}}</b>
+                                <input name="data.combat-abilities.melee.value" type="text" value="{{data.combat-abilities.melee.value}}" data-dtype="Number"/>
+                            </div>
+                            <div class="accuracy">
+                                <b>{{data.combat-abilities.accuracy.label}}</b>
+                                <input name="data.combat-abilities.accuracy.value" type="text" value="{{data.combat-abilities.accuracy.value}}" data-dtype="Number"/>
+                            </div>
+                            <div class="defence">
+                                <b>{{data.combat-abilities.defence.label}}</b>
+                                <input name="data.combat-abilities.defence.value" type="text" value="{{data.combat-abilities.defence.value}}" data-dtype="Number"/>
+                            </div>
+                        </div>
+                        <div class="combat-ability">
+                            <div class="initiative">
+                                <b>{{data.combat-abilities.initiative.label}}</b>
+                                <input name="data.combat-abilities.initiative.value" type="text" value="{{data.combat-abilities.initiative.value}}" data-dtype="Number"/>
+                            </div>
+                            <div class="armour">
+                                <b>{{data.combat-abilities.armour.label}}</b>
+                                <input name="data.combat-abilities.armour.value" type="text" value="{{data.combat-abilities.armour.value}}" data-dtype="Number"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="attacks">
+                        <p>WiP</p>
+                    </div>
+                </div>
+                <div class="wrapper">
+                    <div class="spells">
+                        <p>WiP</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="talent">
+            <div class="talent">
+                <p>Talent</p>
+            </div>
+        </div>
+
+        <div class="tab" data-group="primary" data-tab="gear">
+            <div class="gear">
+                <p>Gear</p>
+            </div>
+        </div>
+    </section>
+</form>
+

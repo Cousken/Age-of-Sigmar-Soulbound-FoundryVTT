@@ -1,0 +1,243 @@
+{
+  "Actor": {
+    "types": [
+      "character"
+    ],
+    "templates": {
+      "bio": {
+        "bio": {
+          "archetype": {
+            "label": "Archetype",
+            "value": ""
+          },
+          "species": {
+            "label": "Species",
+            "value": ""
+          },
+          "age": {
+            "label": "Age",
+            "value": ""
+          },
+          "eyes": {
+            "label": "Eyes",
+            "value": ""
+          },
+          "hair": {
+            "label": "Hair",
+            "value": ""
+          },
+          "height": {
+            "label": "Height",
+            "value": ""
+          },
+          "weight": {
+            "label": "Weight",
+            "value": ""
+          },
+          "distinguishing-features": {
+            "label": "Distinguishing Features",
+            "value": ""
+          },
+          "xp": {
+            "label": "XP",
+            "value": ""
+          }
+        }
+      },
+      "attributes": {
+        "attributes": {
+          "body": {
+            "label": "Body",
+            "value": 0
+          },
+          "mind": {
+            "label": "Mind",
+            "value": 0
+          },
+          "soul": {
+            "label": "Soul",
+            "value": 0
+          }
+        }
+      },
+      "skills": {
+        "skills": {
+          "arcana": {
+            "label": "Arcana",
+            "training": 0,
+            "focus": 0
+          },
+          "athletics": {
+            "label": "Athletics",
+            "training": 0,
+            "focus": 0
+          },
+          "awareness": {
+            "label": "Awareness",
+            "training": 0,
+            "focus": 0
+          },
+          "ballistic-skill": {
+            "label": "Ballistic Skill",
+            "training": 0,
+            "focus": 0
+          },
+          "beast-handling": {
+            "label": "Beast Handling",
+            "training": 0,
+            "focus": 0
+          },
+          "channelling": {
+            "label": "Channelling",
+            "training": 0,
+            "focus": 0
+          },
+          "crafting": {
+            "label": "Crafting",
+            "training": 0,
+            "focus": 0
+          },
+          "determination": {
+            "label": "Determination",
+            "training": 0,
+            "focus": 0
+          },
+          "devotion": {
+            "label": "Devotion",
+            "training": 0,
+            "focus": 0
+          },
+          "dexterity": {
+            "label": "Dexterity",
+            "training": 0,
+            "focus": 0
+          },
+          "entertain": {
+            "label": "Entertain",
+            "training": 0,
+            "focus": 0
+          },
+          "fortitude": {
+            "label": "Fortitude",
+            "training": 0,
+            "focus": 0
+          },
+          "guile": {
+            "label": "Guile",
+            "training": 0,
+            "focus": 0
+          },
+          "intimidation": {
+            "label": "Intimidation",
+            "training": 0,
+            "focus": 0
+          },
+          "intuition": {
+            "label": "Intuition",
+            "training": 0,
+            "focus": 0
+          },
+          "lore": {
+            "label": "Lore",
+            "training": 0,
+            "focus": 0
+          },
+          "medicine": {
+            "label": "Medicine",
+            "training": 0,
+            "focus": 0
+          },
+          "might": {
+            "label": "Might",
+            "training": 0,
+            "focus": 0
+          },
+          "nature": {
+            "label": "Nature",
+            "training": 0,
+            "focus": 0
+          },
+          "reflexes": {
+            "label": "Reflexes",
+            "training": 0,
+            "focus": 0
+          },
+          "stealth": {
+            "label": "Stealth",
+            "training": 0,
+            "focus": 0
+          },
+          "survival": {
+            "label": "Survival",
+            "training": 0,
+            "focus": 0
+          },
+          "theology": {
+            "label": "Theology",
+            "training": 0,
+            "focus": 0
+          },
+          "weapon-skill": {
+            "label": "Weapon Skill",
+            "training": 0,
+            "focus": 0
+          }
+        }
+      },
+      "combat-abilities": {
+        "combat-abilities": {
+          "melee": {
+            "label": "Melee",
+            "value": 1
+          },
+          "accuracy": {
+            "label": "Accuracy",
+            "value": 1
+          },
+          "defence": {
+            "label": "Defence",
+            "value": 1
+          },
+          "initiative": {
+            "label": "Initiative",
+            "value": 1
+          },
+          "armour": {
+            "label": "Armour",
+            "value": 1
+          },
+          "mettle": {
+            "label": "Mettle",
+            "value": 1,
+            "max": 1
+          },
+          "toughness": {
+            "label": "Toughness",
+            "value": 1,
+            "max": 1
+          }
+        }
+      },
+      "wounds": {
+        "wounds": {
+          "label": "Wounds",
+          "value": 0,
+          "max": 0
+        }
+      }
+    },
+    "character": {
+      "templates": [
+        "bio",
+        "attributes",
+        "skills",
+        "combat-abilities",
+        "wounds"
+      ]
+    },
+    "npc": {
+    }
+  },
+  "Item": {
+  }
+}

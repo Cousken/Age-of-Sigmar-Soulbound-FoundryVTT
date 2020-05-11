@@ -1,0 +1,352 @@
+.age-of-sigmar {
+}
+
+.age-of-sigmar.sheet.actor {
+    min-width: 578px;
+    min-height: 757px;
+}
+
+.age-of-sigmar .window-content {
+    height: 100%;
+    padding: 5px;
+    overflow-y: hidden;
+}
+
+.age-of-sigmar .sheet-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.age-of-sigmar .sheet-header .avatar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 100px;
+    align-self: flex-end;
+}
+
+#avatar {
+    margin-right: 0;
+    height: 100px;
+    border: 2px solid gold;
+}
+
+.age-of-sigmar .sheet-header .avatar .roll {
+    padding: 2px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-header .avatar .roll input {
+    width: 20px;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-header .avatar .button {
+    padding: 5px;
+    border: 2px solid gold;
+    margin-top: 10px;
+}
+
+.age-of-sigmar .sheet-header .bio {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    border: 2px solid gold;
+}
+
+.age-of-sigmar .sheet-header .bio div {
+    padding: 2px;
+}
+
+.age-of-sigmar .sheet-header .bio .name {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar .sheet-header .bio .archetype {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar .sheet-header .bio .species {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar .sheet-header .bio .age {
+    flex-basis: 20%;
+}
+
+.age-of-sigmar .sheet-header .bio .eyes {
+    flex-basis: 20%;
+}
+
+.age-of-sigmar .sheet-header .bio .hair {
+    flex-basis: 20%;
+}
+
+.age-of-sigmar .sheet-header .bio .height {
+    flex-basis: 20%;
+}
+
+.age-of-sigmar .sheet-header .bio .weight {
+    flex-basis: 20%;
+}
+
+.age-of-sigmar .sheet-header .bio .distinguishing-features {
+    flex-basis: 85%;
+}
+
+.age-of-sigmar .sheet-header .bio .xp {
+    flex-basis: 15%;
+}
+
+.age-of-sigmar .tabs {
+    height: 40px;
+    margin-top: 5px;
+    border: 2px solid gold;
+}
+
+.age-of-sigmar .tabs .item {
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.age-of-sigmar .tabs .item.active {
+    text-decoration: underline;
+    text-shadow: none;
+}
+
+.age-of-sigmar .sheet-body {
+    overflow: hidden;
+}
+
+.age-of-sigmar .sheet-body .tab {
+    overflow-y: auto;
+}
+
+.age-of-sigmar .sheet-body .main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.age-of-sigmar .sheet-body .main .attributes {
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    margin-top: 5px;
+    border: 2px solid gold;
+    justify-content: center;
+}
+
+.age-of-sigmar .sheet-body .main .attributes .body {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .main .attributes .mind {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .main .attributes .soul {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .main .skills {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    padding: 10px;
+    border: 2px solid gold;
+}
+
+.age-of-sigmar .sheet-body .main .skills-left {
+    flex: 0 0 50%;
+    flex-direction: column;
+    border-right: 2px solid blue;
+}
+
+.age-of-sigmar .sheet-body .main .skills-right {
+    flex: 0 0 50%;
+    flex-direction: column;
+}
+
+.age-of-sigmar .sheet-body .main .skill {
+    display: flex;
+    align-items: baseline;
+    margin: 2px;
+    justify-content: center;
+}
+
+.age-of-sigmar .sheet-body .main .skill .name {
+    flex-basis: 35%;
+    border-bottom: 1px solid blue;
+}
+
+.age-of-sigmar .sheet-body .main .skill .training {
+    flex-basis: 20%;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+.age-of-sigmar .sheet-body .main .skill .focus {
+    flex-basis: 20%;
+    text-align: center;
+    border-bottom: 1px solid blue;
+}
+
+.age-of-sigmar .sheet-body .main .skill span {
+    flex-basis: 35%;
+}
+
+.age-of-sigmar .sheet-body .main .skill div {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-body .main .skill input {
+    width: 30px;
+}
+
+.age-of-sigmar .sheet-body .combat {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-of-sigmar .sheet-body .combat .wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.age-of-sigmar .sheet-body .combat .resources {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 5px;
+    border: 2px solid gold;
+    justify-content: center;
+    flex-basis: 60%;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .toughness {
+    padding: 5px;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .toughness b {
+    display: block;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .toughness input {
+    width: 50px;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .mettle {
+    padding: 5px;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .mettle b {
+    display: block;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .mettle input {
+    width: 50px;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .wounds {
+    padding: 5px;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .wounds b {
+    display: block;
+}
+
+.age-of-sigmar .sheet-body .combat .resources .wounds input {
+    width: 50px;
+}
+
+.age-of-sigmar .sheet-body .combat .combat-abilities {
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    display: flex;
+    margin-top: 5px;
+    border: 2px solid gold;
+    justify-content: center;
+    margin-left: 5px;
+    flex-wrap: wrap;
+}
+
+.age-of-sigmar .sheet-body .combat .combat-ability {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+}
+
+.age-of-sigmar .sheet-body .combat .combat-ability .melee {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .combat .combat-ability .accuracy {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .combat .combat-ability .defence {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .combat .combat-ability .initiative {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .combat .combat-ability .armour {
+    padding: 5px;
+    flex-basis: 33%;
+}
+
+.age-of-sigmar .sheet-body .combat .attacks {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 5px;
+    border: 2px solid gold;
+    justify-content: center;
+}
+
+.age-of-sigmar .sheet-body .combat .spells {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    margin-top: 5px;
+    border: 2px solid gold;
+    justify-content: center;
+}
+
+.age-of-sigmar .sheet-body .talent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.age-of-sigmar .sheet-body .gear {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.age-of-sigmar.sheet.item {
+    min-width: 460px;
+    min-height: 400px;
+}
