@@ -44,10 +44,11 @@
     text-align: center;
 }
 
-.age-of-sigmar .sheet-header .avatar .button {
+.age-of-sigmar .sheet-header .avatar .button-roll {
     padding: 5px;
-    border: 2px solid gold;
+    border: 2px solid blue;
     margin-top: 10px;
+    background-color: gold;
 }
 
 .age-of-sigmar .sheet-header .bio {
@@ -315,23 +316,85 @@
 }
 
 .age-of-sigmar .sheet-body .combat .attacks {
-    align-items: center;
-    text-align: center;
     flex-direction: column;
     display: flex;
     margin-top: 5px;
     border: 2px solid gold;
     justify-content: center;
+    flex-basis: 100%;
+}
+
+.age-of-sigmar .sheet-body .combat .attack {
+    display: flex;
+    margin: 5px;
+}
+
+.age-of-sigmar .sheet-body .combat .attack .name {
+    flex-basis: 20%;
+}
+
+.age-of-sigmar .sheet-body .combat .attack b {
+    border-bottom: 1px solid blue;
+}
+
+.age-of-sigmar .sheet-body .combat .attack .dice-pool {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-body .combat .attack .focus {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-body .combat .attack .damage {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-body .combat .attack .traits {
+    flex-basis: 40%;
 }
 
 .age-of-sigmar .sheet-body .combat .spells {
-    align-items: center;
-    text-align: center;
     flex-direction: column;
     display: flex;
     margin-top: 5px;
     border: 2px solid gold;
     justify-content: center;
+    flex-basis: 100%;
+}
+
+.age-of-sigmar .sheet-body .combat .spell {
+    display: flex;
+    margin: 5px;
+}
+
+.age-of-sigmar .sheet-body .combat .spell b {
+    border-bottom: 1px solid blue;
+}
+
+.age-of-sigmar .sheet-body .combat .spell .name {
+    flex-basis: 20%;
+}
+
+.age-of-sigmar .sheet-body .combat .spell .dn {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-body .combat .spell .target {
+    flex-basis: 10%;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-body .combat .spell .range {
+    flex-basis: 20%;
+    text-align: center;
+}
+
+.age-of-sigmar .sheet-body .combat .spell .duration {
+    flex-basis: 40%;
 }
 
 .age-of-sigmar .sheet-body .talent {

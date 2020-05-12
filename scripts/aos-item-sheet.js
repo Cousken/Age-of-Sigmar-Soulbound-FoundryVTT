@@ -19,6 +19,7 @@ export class AoSItemSheet extends ItemSheet {
     /** @override */
     getData() {
         const data = super.getData();
+        console.log(data);
         return data;
     }
 

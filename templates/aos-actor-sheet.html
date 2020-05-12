@@ -4,12 +4,12 @@
         <div class="avatar">
             <img id="avatar" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100"/>
             <div class="roll">
-                <input name="dice" type="text" value="1" data-dtype="Number"/>
+                <input id="dice" type="text" value="1" data-dtype="Number"/>
                 <b>DN</b>
-                <input name="difficulty" type="text" value="1" data-dtype="Number"/>
+                <input id="difficulty" type="text" value="1" data-dtype="Number"/>
                 <b>:</b>
-                <input name="complexity" type="text" value="1" data-dtype="Number"/>
-                <div class="button">ROLL !</div>
+                <input id="complexity" type="text" value="1" data-dtype="Number"/>
+                <div class="button-roll">ROLL !</div>
             </div>
         </div>
         <div class="bio">
@@ -88,12 +88,12 @@
                             <b class="training">Training</b>
                             <b class="focus">Focus</b>
                         </div>
-                        {{#each data.skills as |skill|}}
+                        {{#each data.skills as |skill key|}}
                             {{#if skill.isLeft}}
                             <div class="skill">
                                 <span>{{skill.label}}</span>
-                                <div><input name="{{skill}}.training" type="text" value="{{skill.training}}" data-dtype="Number"/></div>
-                                <div><input name="{{skill}}.focus" type="text" value="{{skill.focus}}" data-dtype="Number"/></div>
+                                <div><input name="data.skills.{{key}}.training" type="text" value="{{skill.training}}" data-dtype="Number"/></div>
+                                <div><input name="data.skills.{{key}}.focus" type="text" value="{{skill.focus}}" data-dtype="Number"/></div>
                             </div>
                             {{/if}}
                         {{/each}}
@@ -104,12 +104,12 @@
                             <b class="training">Training</b>
                             <b class="focus">Focus</b>
                         </div>
-                        {{#each data.skills as |skill|}}
+                        {{#each data.skills as |skill key|}}
                             {{#if skill.isRight}}
                             <div class="skill">
                                 <span>{{skill.label}}</span>
-                                <div><input name="{{skill}}.training" type="text" value="{{skill.training}}" data-dtype="Number"/></div>
-                                <div><input name="{{skill}}.focus" type="text" value="{{skill.focus}}" data-dtype="Number"/></div>
+                                <div><input name="data.skills.{{key}}.training" type="text" value="{{skill.training}}" data-dtype="Number"/></div>
+                                <div><input name="data.skills.{{key}}.focus" type="text" value="{{skill.focus}}" data-dtype="Number"/></div>
                             </div>
                             {{/if}}
                         {{/each}}
@@ -176,12 +176,46 @@
                 </div>
                 <div class="wrapper">
                     <div class="attacks">
-                        <p>WiP</p>
+                        <div class="attack">
+                            <b class="name">Name</b>
+                            <b class="dice-pool">Pool</b>
+                            <b class="focus">Focus</b>
+                            <b class="damage">Damage</b>
+                            <b class="traits">Traits</b>
+                        </div>
+                        {{#each actor.items as |item|}}
+                            {{#if item.isWeapon}}
+                            <div class="attack">
+                                <span class="name">{{item.name}}</span>
+                                <span class="dice-pool">{{item.dicePool}}</span>
+                                <span class="focus">{{item.focus}}</span>
+                                <span class="damage">{{item.data.damage}}</span>
+                                <span class="traits">{{item.data.traits}}</span>
+                            </div>
+                            {{/if}}
+                        {{/each}}
                     </div>
                 </div>
                 <div class="wrapper">
                     <div class="spells">
-                        <p>WiP</p>
+                        <div class="spell">
+                            <b class="name">Name</b>
+                            <b class="dn">DN</b>
+                            <b class="target">Target</b>
+                            <b class="range">Range</b>
+                            <b class="duration">Duration</b>
+                        </div>
+                        {{#each actor.items as |item|}}
+                            {{#if item.isSpell}}
+                            <div class="spell">
+                                <span class="name">{{item.name}}</span>
+                                <span class="dn">{{item.data.dn}}</span>
+                                <span class="target">{{item.data.target}}</span>
+                                <span class="range">{{item.data.range}}</span>
+                                <span class="duration">{{item.data.duration}}</span>
+                            </div>
+                            {{/if}}
+                        {{/each}}
                     </div>
                 </div>
             </div>
