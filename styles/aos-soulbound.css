@@ -347,6 +347,197 @@
 }
 
 .age-of-sigmar.sheet.item {
-    min-width: 460px;
-    min-height: 400px;
+    min-width: 350px;
+    min-height: 300px;
+}
+
+.age-of-sigmar.sheet.item .weapon {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-of-sigmar.sheet.item .weapon .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.age-of-sigmar.sheet.item .weapon .name {
+    flex-basis: 75%;
+}
+
+.age-of-sigmar.sheet.item .weapon .category {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .weapon .availability {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar.sheet.item .weapon .damage {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .weapon .cost {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .weapon .traits {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .weapon .description {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .weapon .description textarea {
+    min-height: 80px
+}
+
+.age-of-sigmar.sheet.item .armour {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-of-sigmar.sheet.item .armour .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.age-of-sigmar.sheet.item .armour .name {
+    flex-basis: 75%;
+}
+
+.age-of-sigmar.sheet.item .armour .category {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .armour .availability {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar.sheet.item .armour .type {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .armour .cost {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .armour .requirements {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar.sheet.item .armour .benefit {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar.sheet.item .armour .traits {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .armour .description {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .armour .description textarea {
+    min-height: 80px
+}
+
+.age-of-sigmar.sheet.item .gear {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-of-sigmar.sheet.item .gear .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.age-of-sigmar.sheet.item .gear .name {
+    flex-basis: 75%;
+}
+
+.age-of-sigmar.sheet.item .gear .availability {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar.sheet.item .gear .damage {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .gear .cost {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .gear .traits {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .gear .description {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .gear .description textarea {
+    min-height: 80px
+}
+
+.age-of-sigmar.sheet.item .kharadron {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-of-sigmar.sheet.item .kharadron .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.age-of-sigmar.sheet.item .kharadron .name {
+    flex-basis: 75%;
+}
+
+.age-of-sigmar.sheet.item .kharadron .availability {
+    flex-basis: 50%;
+}
+
+.age-of-sigmar.sheet.item .kharadron .cost {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .kharadron .description {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .kharadron .description textarea {
+    min-height: 130px
+}
+
+.age-of-sigmar.sheet.item .talent {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-of-sigmar.sheet.item .talent .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.age-of-sigmar.sheet.item .talent .name {
+    flex-basis: 75%;
+}
+
+.age-of-sigmar.sheet.item .talent .requirements {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .talent .description {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .talent .description textarea {
+    min-height: 130px
 }

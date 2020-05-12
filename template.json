@@ -239,5 +239,46 @@
     }
   },
   "Item": {
+    "types": [
+      "weapon",
+      "armour",
+      "gear",
+      "kharadron",
+      "talent"
+    ],
+    "weapon": {
+      "category": "",
+      "cost": "",
+      "availability": "",
+      "damage": "",
+      "traits": "",
+      "description": ""
+    },
+    "armour": {
+      "category": "",
+      "type": "",
+      "cost": "",
+      "availability": "",
+      "requirements": "",
+      "benefit": "",
+      "traits": "",
+      "description": ""
+    },
+    "gear": {
+      "cost": "",
+      "availability": "",
+      "damage": "",
+      "traits": "",
+      "description": ""
+    },
+    "kharadron": {
+      "cost": "",
+      "availability": "",
+      "description": ""
+    },
+    "talent": {
+      "requirements": "",
+      "description": ""
+    }
   }
 }
