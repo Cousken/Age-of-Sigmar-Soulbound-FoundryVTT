@@ -541,3 +541,50 @@
 .age-of-sigmar.sheet.item .talent .description textarea {
     min-height: 130px
 }
+
+.age-of-sigmar.sheet.item .spell {
+    display: flex;
+    flex-direction: column;
+}
+
+.age-of-sigmar.sheet.item .spell .wrapper {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.age-of-sigmar.sheet.item .spell .name {
+    flex-basis: 75%;
+}
+
+.age-of-sigmar.sheet.item .spell .dn {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .spell .target {
+    flex-basis: 33%;
+}
+
+.age-of-sigmar.sheet.item .spell .range {
+    flex-basis: 33%;
+}
+
+.age-of-sigmar.sheet.item .spell .duration {
+    flex-basis: 33%;
+}
+
+.age-of-sigmar.sheet.item .spell .test {
+    flex-basis: 25%;
+}
+
+.age-of-sigmar.sheet.item .spell .overcast {
+    flex-basis: 75%;
+}
+
+.age-of-sigmar.sheet.item .spell .description {
+    flex-basis: 100%;
+}
+
+.age-of-sigmar.sheet.item .spell .description textarea {
+    min-height: 130px
+}

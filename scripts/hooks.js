@@ -10,7 +10,7 @@ Hooks.once("init", async function () {
     Actors.registerSheet("aos", AoSActorSheet, {types: ["character"], makeDefault: true});
     Items.unregisterSheet("core", ItemSheet);
     Items.registerSheet("aos", AoSItemSheet, {
-        types: ["weapon", "armour", "gear", "kharadron", "talent"],
+        types: ["weapon", "armour", "gear", "kharadron", "talent", "spell"],
         makeDefault: true
     });
     preloadHandlebarsTemplates()
@@ -19,7 +19,12 @@ Hooks.once("init", async function () {
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/age-of-sigmar-soulbound/templates/aos-actor-sheet.html",
-        "systems/age-of-sigmar-soulbound/templates/aos-item-sheet.html"
+        "systems/age-of-sigmar-soulbound/templates/aos-item-sheet-armour.html",
+        "systems/age-of-sigmar-soulbound/templates/aos-item-sheet-gear.html",
+        "systems/age-of-sigmar-soulbound/templates/aos-item-kharadron.html",
+        "systems/age-of-sigmar-soulbound/templates/aos-item-sheet-spell.html",
+        "systems/age-of-sigmar-soulbound/templates/aos-item-sheet-talent.html",
+        "systems/age-of-sigmar-soulbound/templates/aos-item-sheet-weapon.html"
     ];
     return loadTemplates(templatePaths);
 }
