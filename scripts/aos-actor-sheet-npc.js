@@ -1,23 +1,19 @@
-export class AoSActorSheet extends ActorSheet {
+export class AoSActorSheetNpc extends ActorSheet {
 
     /** @override */
     static get defaultOptions() {
-        console.log(`AoSActorSheet - defaultOptions`);
         return mergeObject(super.defaultOptions, {
             classes: ["age-of-sigmar", "sheet", "actor"],
-            template: "systems/age-of-sigmar-soulbound/templates/aos-actor-sheet.html",
+            template: "systems/age-of-sigmar-soulbound/templates/aos-actor-sheet-npc.html",
             width: 578,
-            height: 757,
-            tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
+            height: 780
         });
     }
 
     /** @override */
     getData() {
         const data = super.getData();
-        this.computeSkills(data);
         this.computeItems(data);
-        console.log(data);
         return data;
     }
 
@@ -30,6 +26,17 @@ export class AoSActorSheet extends ActorSheet {
             let complexity = html.find('#complexity').val();
             event.preventDefault();
             this.roll(dice, difficulty, complexity);
+        });
+        html.find('.item-create').click(ev => this.onItemCreate(ev));
+        html.find('.item-edit').click(ev => {
+            const div = $(ev.currentTarget).parents(".item");
+            const item = this.actor.getOwnedItem(div.data("itemId"));
+            item.sheet.render(true);
+        });
+        html.find('.item-delete').click(ev => {
+            const div = $(ev.currentTarget).parents(".item");
+            this.actor.deleteOwnedItem(div.data("itemId"));
+            div.slideUp(200, () => this.render(false));
         });
     }
 
@@ -67,34 +74,18 @@ export class AoSActorSheet extends ActorSheet {
         ChatMessage.create(chatData, {});
     }
 
-    computeSkills(data) {
-        let middle = Object.values(data.data.skills).length / 2;
-        let i = 0;
-        for (let skill of Object.values(data.data.skills)) {
-            skill.isLeft = i < middle;
-            skill.isRight = i >= middle;
-            i++;
+    computeItems(data) {
+        for (let item of Object.values(data.items)) {
+            item.isTrait = item.type === 'trait';
+            item.isAttack = item.type === 'attack';
         }
     }
 
-    computeItems(data) {
-        for (let item of Object.values(data.items)) {
-            item.isWeapon = item.type === 'weapon';
-            item.isSpell = item.type === 'spell';
-            item.isTalent = item.type === 'talent';
-            item.isArmour = item.type === 'armour';
-            item.isGear = item.type === 'weapon' || item.type === 'gear' || item.type === 'armour';
-            if (item.isWeapon) {
-                let attributes = Object.values(data.data.attributes);
-                let skills = Object.values(data.data.skills);
-                if (item.data.category === 'accuracy') {
-                    item.dicePool = attributes[0].value + skills[3].training;
-                    item.focus = skills[3].focus;
-                } else {
-                    item.dicePool = attributes[0].value + skills[23].training;
-                    item.focus = skills[23].focus;
-                }
-            }
-        }
+    onItemCreate(event) {
+        event.preventDefault();
+        let header = event.currentTarget;
+        let data = duplicate(header.dataset);
+        data["name"] = `New ${data.type.capitalize()}`;
+        this.actor.createEmbeddedEntity("OwnedItem", data);
     }
 }

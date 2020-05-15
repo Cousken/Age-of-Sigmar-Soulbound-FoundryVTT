@@ -1,7 +1,9 @@
 {
   "Actor": {
     "types": [
-      "character"
+      "character",
+      "npc",
+      "party"
     ],
     "templates": {
       "bio": {
@@ -224,6 +226,22 @@
           "value": 0,
           "max": 0
         }
+      },
+      "currency": {
+        "currency": {
+          "drops": {
+            "label": "Drops",
+            "value": 0
+          },
+          "phals": {
+            "label": "Phals",
+            "value": 0
+          },
+          "spheres": {
+            "label": "Spheres",
+            "value": 0
+          }
+        }
       }
     },
     "character": {
@@ -232,10 +250,42 @@
         "attributes",
         "skills",
         "combat-abilities",
-        "wounds"
+        "wounds",
+        "currency"
       ]
     },
     "npc": {
+      "race": "",
+      "melee": 0,
+      "accuracy": 0,
+      "defence": 0,
+      "armour": 0,
+      "toughness": {
+        "max": 0,
+        "value": 0
+      },
+      "mettle": {
+        "max": 0,
+        "value": 0
+      },
+      "wounds": {
+        "max": 0,
+        "value": 0
+      },
+      "speed": "",
+      "initiative": "",
+      "natural-awareness": "",
+      "skills": "",
+      "body": 0,
+      "mind": 0,
+      "soul": 0
+    },
+    "party": {
+      "soulfire": {
+        "value": 0,
+        "max": 0
+      },
+      "doom": 0
     }
   },
   "Item": {
@@ -245,7 +295,15 @@
       "gear",
       "kharadron",
       "talent",
-      "spell"
+      "spell",
+      "trait",
+      "attack",
+      "ally",
+      "resource",
+      "enemy",
+      "rumour",
+      "fear",
+      "threat"
     ],
     "weapon": {
       "category": "",
@@ -288,6 +346,30 @@
       "duration": "",
       "test": "",
       "overcast": "",
+      "description": ""
+    },
+    "trait": {
+      "description": ""
+    },
+    "attack": {
+      "description": ""
+    },
+    "ally": {
+      "description": ""
+    },
+    "resource": {
+      "description": ""
+    },
+    "enemy": {
+      "description": ""
+    },
+    "rumour": {
+      "description": ""
+    },
+    "fear": {
+      "description": ""
+    },
+    "threat": {
       "description": ""
     }
   }

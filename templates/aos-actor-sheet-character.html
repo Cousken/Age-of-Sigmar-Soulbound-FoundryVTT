@@ -59,6 +59,7 @@
     <nav class="sheet-tabs tabs" data-group="primary">
         <a class="item" data-tab="main">MAIN</a>
         <a class="item" data-tab="combat">COMBAT</a>
+        <a class="item" data-tab="spell">SPELL</a>
         <a class="item" data-tab="talent">TALENT</a>
         <a class="item" data-tab="gear">GEAR</a>
     </nav>
@@ -125,26 +126,26 @@
                         <div class="toughness">
                             <b>{{data.combat-abilities.toughness.label}}</b>
                             <span>
-                            <input name="data.combat-abilities.toughness.value" type="text" value="{{data.combat-abilities.toughness.value}}" data-dtype="Number"/>
-                            /
-                            <input name="data.combat-abilities.toughness.max" type="text" value="{{data.combat-abilities.toughness.max}}" data-dtype="Number"/>
-                        </span>
+                                <input name="data.combat-abilities.toughness.value" type="text" value="{{data.combat-abilities.toughness.value}}" data-dtype="Number"/>
+                                /
+                                <input name="data.combat-abilities.toughness.max" type="text" value="{{data.combat-abilities.toughness.max}}" data-dtype="Number"/>
+                            </span>
                         </div>
                         <div class="mettle">
                             <b>{{data.combat-abilities.mettle.label}}</b>
                             <span>
-                            <input name="data.combat-abilities.mettle.value" type="text" value="{{data.combat-abilities.mettle.value}}" data-dtype="Number"/>
-                            /
-                            <input name="data.combat-abilities.mettle.max" type="text" value="{{data.combat-abilities.mettle.max}}" data-dtype="Number"/>
-                        </span>
+                                <input name="data.combat-abilities.mettle.value" type="text" value="{{data.combat-abilities.mettle.value}}" data-dtype="Number"/>
+                                /
+                                <input name="data.combat-abilities.mettle.max" type="text" value="{{data.combat-abilities.mettle.max}}" data-dtype="Number"/>
+                            </span>
                         </div>
                         <div class="wounds">
                             <b>{{data.wounds.label}}</b>
                             <span>
-                            <input name="data.wounds.value" type="text" value="{{data.wounds.value}}" data-dtype="Number"/>
-                            /
-                            <input name="data.wounds.max" type="text" value="{{data.wounds.max}}" data-dtype="Number"/>
-                        </span>
+                                <input name="data.wounds.value" type="text" value="{{data.wounds.value}}" data-dtype="Number"/>
+                                /
+                                <input name="data.wounds.max" type="text" value="{{data.wounds.max}}" data-dtype="Number"/>
+                            </span>
                         </div>
                     </div>
                     <div class="combat-abilities">
@@ -183,17 +184,19 @@
                             <b class="damage">Damage</b>
                             <b class="traits">Traits</b>
                         </div>
-                        {{#each actor.items as |item|}}
-                            {{#if item.isWeapon}}
-                            <div class="attack">
-                                <span class="name">{{item.name}}</span>
-                                <span class="dice-pool">{{item.dicePool}}</span>
-                                <span class="focus">{{item.focus}}</span>
-                                <span class="damage">{{item.data.damage}}</span>
-                                <span class="traits">{{item.data.traits}}</span>
-                            </div>
-                            {{/if}}
-                        {{/each}}
+                        <div class="scrollable">
+                            {{#each actor.items as |item|}}
+                                {{#if item.isWeapon}}
+                                <div class="attack">
+                                    <span class="name">{{item.name}}</span>
+                                    <span class="dice-pool">{{item.dicePool}}</span>
+                                    <span class="focus">{{item.focus}}</span>
+                                    <span class="damage">{{item.data.damage}}</span>
+                                    <span class="traits">{{item.data.traits}}</span>
+                                </div>
+                                {{/if}}
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
                 <div class="wrapper">
@@ -205,31 +208,100 @@
                             <b class="range">Range</b>
                             <b class="duration">Duration</b>
                         </div>
-                        {{#each actor.items as |item|}}
-                            {{#if item.isSpell}}
-                            <div class="spell">
-                                <span class="name">{{item.name}}</span>
-                                <span class="dn">{{item.data.dn}}</span>
-                                <span class="target">{{item.data.target}}</span>
-                                <span class="range">{{item.data.range}}</span>
-                                <span class="duration">{{item.data.duration}}</span>
-                            </div>
-                            {{/if}}
-                        {{/each}}
+                        <div class="scrollable">
+                            {{#each actor.items as |item|}}
+                                {{#if item.isSpell}}
+                                <div class="spell">
+                                    <span class="name">{{item.name}}</span>
+                                    <span class="dn">{{item.data.dn}}</span>
+                                    <span class="target">{{item.data.target}}</span>
+                                    <span class="range">{{item.data.range}}</span>
+                                    <span class="duration">{{item.data.duration}}</span>
+                                </div>
+                                {{/if}}
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
+        <div class="tab" data-group="primary" data-tab="spell">
+            <div class="spells-tab">
+                {{#each actor.items as |item|}}
+                {{#if item.isSpell}}
+                <div class="spell item" data-item-id="{{item._id}}">
+                    <div class="name">{{item.name}}</div>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Spell"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Spell"><i class="fas fa-trash"></i></a>
+                    </div>
+                    <div class="wrapper">
+                        <span class="dn"><b>DN: </b>{{item.data.dn}}</span>
+                        <span class="target"><b>Target: </b>{{item.data.target}}</span>
+                        <span class="range"><b>Range: </b>{{item.data.range}}</span>
+                        <span class="duration"><b>Duration: </b>{{item.data.duration}}</span>
+                    </div>
+                    <div class="wrapper">
+                        <span class="test"><b>Test: </b>{{item.data.test}}</span>
+                    </div>
+                    <div class="wrapper">
+                        <span class="overcast"><b>Overcast: </b>{{item.data.overcast}}</span>
+                    </div>
+                    <div class="description">{{item.data.description}}</div>
+                </div>
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+
         <div class="tab" data-group="primary" data-tab="talent">
-            <div class="talent">
-                <p>Talent</p>
+            <div class="talents">
+                {{#each actor.items as |item|}}
+                    {{#if item.isTalent}}
+                    <div class="talent item" data-item-id="{{item._id}}">
+                        <div class="name">{{item.name}}</div>
+                        <div class="item-controls">
+                            <a class="item-control item-edit" title="Edit Talent"><i class="fas fa-edit"></i></a>
+                            <a class="item-control item-delete" title="Delete Talent"><i class="fas fa-trash"></i></a>
+                        </div>
+                        <div class="description">{{item.data.description}}</div>
+                    </div>
+                    {{/if}}
+                {{/each}}
             </div>
         </div>
 
         <div class="tab" data-group="primary" data-tab="gear">
-            <div class="gear">
-                <p>Gear</p>
+            <div class="gears">
+                <div class="currency">
+                    <div class="drops">
+                        <b>{{data.currency.drops.label}}</b>
+                        <input name="data.currency.drops.value" type="text" value="{{data.currency.drops.value}}" data-dtype="Number"/>
+                    </div>
+                    <div class="phals">
+                        <b>{{data.currency.phals.label}}</b>
+                        <input name="data.currency.phals.value" type="text" value="{{data.currency.phals.value}}" data-dtype="Number"/>
+                    </div>
+                    <div class="spheres">
+                        <b>{{data.currency.spheres.label}}</b>
+                        <input name="data.currency.spheres.value" type="text" value="{{data.currency.spheres.value}}" data-dtype="Number"/>
+                    </div>
+                </div>
+                <div class="equipments">
+                    {{#each actor.items as |item|}}
+                        {{#if item.isGear}}
+                        <div class="gear item" data-item-id="{{item._id}}">
+                            <div class="name">{{item.name}}</div>
+                            <div class="item-controls">
+                                <a class="item-control item-edit" title="Edit Gear"><i class="fas fa-edit"></i></a>
+                                <a class="item-control item-delete" title="Delete Gear"><i class="fas fa-trash"></i></a>
+                            </div>
+                            <div class="description">{{item.data.description}}</div>
+                        </div>
+                        {{/if}}
+                    {{/each}}
+                </div>
             </div>
         </div>
     </section>
