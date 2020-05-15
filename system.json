@@ -2,7 +2,7 @@
   "name": "age-of-sigmar-soulbound",
   "title": "Age of Sigmar : Soulbound",
   "description": "Perilous adventures in the mortal realms",
-  "version": 0.1,
+  "version": 1.0,
   "minimumCoreVersion": "0.5.5",
   "compatibleCoreVersion": "0.5.5",
   "templateVersion": 2,
