@@ -200,10 +200,6 @@
             "label": "Defence",
             "value": 1
           },
-          "initiative": {
-            "label": "Initiative",
-            "value": 1
-          },
           "armour": {
             "label": "Armour",
             "value": 1
@@ -218,6 +214,10 @@
             "value": 1,
             "max": 1
           }
+        },
+        "initiative": {
+          "label": "Initiative",
+          "value": 1
         }
       },
       "wounds": {
@@ -255,26 +255,14 @@
       ]
     },
     "npc": {
+      "templates": ["combat-abilities"],
       "race": "",
-      "melee": 0,
-      "accuracy": 0,
-      "defence": 0,
-      "armour": 0,
-      "toughness": {
-        "max": 0,
-        "value": 0
-      },
-      "mettle": {
-        "max": 0,
-        "value": 0
-      },
       "wounds": {
         "max": 0,
         "value": 0
       },
       "speed": "",
-      "initiative": "",
-      "natural-awareness": "",
+      "natural-awareness": 0,
       "skills": "",
       "body": 0,
       "mind": 0,

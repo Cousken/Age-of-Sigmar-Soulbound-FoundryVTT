@@ -5,7 +5,7 @@ import {AoSActorSheetParty} from "./aos-actor-sheet-party.js";
 import {AoSItemSheet} from "./aos-item-sheet.js";
 
 Hooks.once("init", async function () {
-    CONFIG.Combat.initiative = {formula: "1d6", decimals: 2};
+    CONFIG.Combat.initiative = {formula: "@initiative.value", decimals: 0};
     CONFIG.Actor.entityClass = AoSActor;
     Actors.unregisterSheet("core", ActorSheet);
     Actors.registerSheet("aos", AosActorSheetCharacter, {types: ["character"], makeDefault: true});
