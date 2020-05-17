@@ -27,6 +27,15 @@ export class AoSActorSheetNpc extends ActorSheet {
             event.preventDefault();
             this.roll(dice, difficulty, complexity);
         });
+        html.find('.toughness-max').change(event => {
+            this.actor.data.data["combat-abilities"].toughness.value = event.target.value;
+        });
+        html.find('.wounds-max').change(event => {
+            this.actor.data.data["wounds"].value = event.target.value;
+        });
+        html.find('.mettle-max').change(event => {
+            this.actor.data.data["combat-abilities"].mettle.value = event.target.value;
+        });
         html.find('.item-create').click(ev => this.onItemCreate(ev));
         html.find('.item-edit').click(ev => {
             const div = $(ev.currentTarget).parents(".item");
