@@ -30,7 +30,7 @@
 #avatar {
     margin-right: 0;
     height: 100px;
-    border: 2px solid gold;
+    border: 2px solid black;
 }
 
 .age-of-sigmar .sheet-header .avatar .roll {
@@ -46,9 +46,9 @@
 
 .age-of-sigmar .sheet-header .avatar .button-roll {
     padding: 5px;
-    border: 2px solid blue;
+    border: 2px solid black;
     margin-top: 10px;
-    background-color: gold;
+    background-color: black;
 }
 
 /* ----------------------------------------------- */
@@ -58,7 +58,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-left: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
 }
 
 .age-of-sigmar .sheet-header .bio div {
@@ -110,7 +110,7 @@
 .age-of-sigmar .tabs {
     height: 40px;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
 }
 
 .age-of-sigmar .tabs .item {
@@ -145,7 +145,7 @@
     flex-direction: row;
     display: flex;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
     justify-content: center;
 }
 
@@ -170,13 +170,13 @@
     flex-direction: row;
     margin-top: 5px;
     padding: 10px;
-    border: 2px solid gold;
+    border: 2px solid black;
 }
 
 .age-of-sigmar .sheet-body .main .skills-left {
     flex: 0 0 50%;
     flex-direction: column;
-    border-right: 2px solid blue;
+    border-right: 2px solid black;
 }
 
 .age-of-sigmar .sheet-body .main .skills-right {
@@ -193,19 +193,19 @@
 
 .age-of-sigmar .sheet-body .main .skill .name {
     flex-basis: 35%;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .main .skill .training {
     flex-basis: 20%;
     text-align: center;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .main .skill .focus {
     flex-basis: 20%;
     text-align: center;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .main .skill span {
@@ -239,7 +239,7 @@
     flex-direction: column;
     display: flex;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
     justify-content: center;
     flex-basis: 60%;
 }
@@ -286,7 +286,7 @@
     flex-direction: row;
     display: flex;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
     justify-content: center;
     margin-left: 5px;
     flex-wrap: wrap;
@@ -326,7 +326,7 @@
 .age-of-sigmar .sheet-body .combat .attacks {
     flex-direction: column;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
     justify-content: center;
     flex-basis: 100%;
 }
@@ -347,7 +347,7 @@
 }
 
 .age-of-sigmar .sheet-body .combat .attack b {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .combat .attack .dice-pool {
@@ -372,7 +372,7 @@
 .age-of-sigmar .sheet-body .combat .spells {
     flex-direction: column;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
     justify-content: center;
     flex-basis: 100%;
 }
@@ -389,7 +389,7 @@
 }
 
 .age-of-sigmar .sheet-body .combat .spell b {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .combat .spell .name {
@@ -424,7 +424,7 @@
     max-height: 460px;
     height: 460px;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
 }
 
 .age-of-sigmar .sheet-body .talents .talent {
@@ -438,7 +438,7 @@
     flex-basis: 93%;
     font-weight: bold;
     font-size: 20px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .talents .talent .description {
@@ -448,7 +448,7 @@
 }
 
 .age-of-sigmar .sheet-body .talents .talent .item-controls {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 /* ----------------------------------------------- */
@@ -460,7 +460,7 @@
     max-height: 460px;
     height: 460px;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
 }
 
 .age-of-sigmar .sheet-body .spells-tab .spell {
@@ -474,7 +474,7 @@
     flex-basis: 93%;
     font-weight: bold;
     font-size: 20px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .spells-tab .spell .wrapper {
@@ -516,7 +516,7 @@
 }
 
 .age-of-sigmar .sheet-body .spells-tab .spell .item-controls {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 /* ----------------------------------------------- */
@@ -533,7 +533,7 @@
     flex-direction: row;
     display: flex;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
     justify-content: center;
 }
 
@@ -559,7 +559,7 @@
     max-height: 390px;
     height: 390px;
     margin-top: 5px;
-    border: 2px solid gold;
+    border: 2px solid black;
 }
 
 .age-of-sigmar .sheet-body .gears .equipments .gear {
@@ -573,7 +573,7 @@
     flex-basis: 93%;
     font-weight: bold;
     font-size: 20px;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar .sheet-body .gears .equipments .gear .description {
@@ -583,7 +583,7 @@
 }
 
 .age-of-sigmar .sheet-body .gears .equipments .gear .item-controls {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 /* ----------------------------------------------- */
@@ -904,7 +904,7 @@
     text-align: center;
     padding: 5px;
     flex-wrap: wrap;
-    border: 2px solid gold;
+    border: 2px solid black;
     margin: 2px;
 }
 
@@ -924,9 +924,9 @@
 }
 
 .age-of-sigmar.sheet.actor .npc .wrapper .button-roll {
-    border: 2px solid blue;
+    border: 2px solid black;
     margin-top: 5px;
-    background-color: gold;
+    background-color: black;
 }
 
 .age-of-sigmar.sheet.actor .npc .wrapper .race {
@@ -981,7 +981,7 @@
     flex-direction: row;
     flex-basis: 100%;
     display: flex;
-    border-bottom: 2px solid gold;
+    border-bottom: 2px solid black;
     margin-bottom: 5px;
 }
 
@@ -1008,7 +1008,7 @@
 .age-of-sigmar.sheet.actor .npc .wrapper .traits .trait {
     display: flex;
     text-align: left;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar.sheet.actor .npc .wrapper .traits .trait .name {
@@ -1041,7 +1041,7 @@
 .age-of-sigmar.sheet.actor .npc .wrapper .attacks .attack {
     display: flex;
     text-align: left;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar.sheet.actor .npc .wrapper .attacks .attack .name {
@@ -1088,7 +1088,7 @@
     text-align: center;
     padding: 5px;
     flex-wrap: wrap;
-    border: 2px solid gold;
+    border: 2px solid black;
     margin: 2px;
 }
 
@@ -1144,7 +1144,7 @@
     flex-direction: row;
     flex-basis: 100%;
     display: flex;
-    border-bottom: 2px solid gold;
+    border-bottom: 2px solid black;
     margin-bottom: 5px;
 }
 
@@ -1171,7 +1171,7 @@
 .age-of-sigmar.sheet.actor .party .wrapper .lists .list {
     display: flex;
     text-align: left;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid black;
 }
 
 .age-of-sigmar.sheet.actor .party .wrapper .lists .list .name {
