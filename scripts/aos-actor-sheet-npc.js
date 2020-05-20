@@ -28,13 +28,13 @@ export class AoSActorSheetNpc extends ActorSheet {
             this.roll(dice, difficulty, complexity);
         });
         html.find('.toughness-max').change(event => {
-            this.actor.data.data["combat-abilities"].toughness.value = event.target.value;
+            html.find('.toughness .invisible-value')[0].value = event.target.value;
         });
         html.find('.wounds-max').change(event => {
-            this.actor.data.data["wounds"].value = event.target.value;
+            html.find('.wounds .invisible-value')[0].value = event.target.value;
         });
         html.find('.mettle-max').change(event => {
-            this.actor.data.data["combat-abilities"].mettle.value = event.target.value;
+            html.find('.mettle .invisible-value')[0].value = event.target.value;
         });
         html.find('.item-create').click(ev => this.onItemCreate(ev));
         html.find('.item-edit').click(ev => {

@@ -932,6 +932,7 @@
     border: 2px solid black;
     margin-top: 5px;
     background-color: black;
+    color: white;
 }
 
 .age-of-sigmar.sheet.actor .npc .wrapper .race {
