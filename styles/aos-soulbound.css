@@ -909,6 +909,10 @@
     margin: 2px;
 }
 
+.age-of-sigmar.sheet.actor .npc .wrapper .invisible-value {
+    display: none;
+}
+
 .age-of-sigmar.sheet.actor .npc .wrapper.left {
     text-align: left;
 }
