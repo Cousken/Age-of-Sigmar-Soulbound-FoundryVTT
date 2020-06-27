@@ -17,7 +17,7 @@ Nothing. You are more than welcome to fork this project !
 
 ## Related Website
 - https://foundryvtt.com/
-- https://www.cubicle7games.com/category/age-of-sigmar/
+- https://www.cubicle7games.com/product-category/warhammer-aos/
 
 ## Licence
 [GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
