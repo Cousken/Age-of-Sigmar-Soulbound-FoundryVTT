@@ -1,5 +1,6 @@
 # Age of Sigmar : Soulbound
-A system for playing Age of Sigmar : Soulbound on Foundry VTT
+An **UNOFFICIAL** system for playing Age of Sigmar : Soulbound on Foundry VTT.  
+It provides support for **character sheets only**, game content should be drawn from official source books.
 
 ## Install
 1. Go to the setup page and choose **Game Systems**.
