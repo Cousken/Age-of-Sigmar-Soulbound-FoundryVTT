@@ -1,33 +1,33 @@
 <form class="{{cssClass}}" autocomplete="off">
     <div class="npc">
-        <div class="wrapper">
-            <div class="roll">
-                <input id="dice" type="text" value="1" data-dtype="Number"/>
-                <b>DN</b>
-                <input id="difficulty" type="text" value="1" data-dtype="Number"/>
-                <b>:</b>
-                <input id="complexity" type="text" value="1" data-dtype="Number"/>
-                <div class="button-roll">ROLL !</div>
+        <header class="sheet-header">
+            <div class="avatar">
+                <img id="avatar" src="{{actor.img}}" data-edit="img" title="{{actor.name}}" height="100" width="100" />
             </div>
-            <div class="race">
-                <b>Race</b>
-                <input name="data.race" type="text" value="{{data.race}}">
+            <div>
+                <div class="bio">
+                    <div class="name">
+                        <b>Character Name</b>
+                        <input name="name" type="text" value="{{actor.name}}">
+                    </div>
+                    <div class="race">
+                        <b>Race</b>
+                        <input name="data.race" type="text" value="{{data.race}}">
+                    </div>
+                </div>
+
             </div>
-        </div>
-        <div class="wrapper">
-            <div class="melee">
-                <b>Melee</b>
-                <input name="data.combat-abilities.melee.value" type="text" value="{{data.combat-abilities.melee.value}}">
+            <div class="avatar">
+                <div class="roll">
+                    <input id="dice" type="text" value="1" data-dtype="Number" />
+                    <b>DN</b>
+                    <input id="difficulty" type="text" value="1" data-dtype="Number" />
+                    <b>:</b>
+                    <input id="complexity" type="text" value="1" data-dtype="Number" />
+                    <div class="button-roll">ROLL !</div>
+                </div>
             </div>
-            <div class="accuracy">
-                <b>Accuracy</b>
-                <input name="data.combat-abilities.accuracy.value" type="text" value="{{data.combat-abilities.accuracy.value}}">
-            </div>
-            <div class="defence">
-                <b>Defence</b>
-                <input name="data.combat-abilities.defence.value" type="text" value="{{data.combat-abilities.defence.value}}">
-            </div>
-        </div>
+        </header>
         <div class="wrapper">
             <div class="body">
                 <b>Body</b>
@@ -42,25 +42,33 @@
                 <input name="data.soul" type="text" value="{{data.soul}}" data-dtype="Number">
             </div>
         </div>
+
         <div class="wrapper">
             <div class="armour">
                 <b>Armour</b>
-                <input name="data.combat-abilities.armour.value" type="text" value="{{data.combat-abilities.armour.value}}" data-dtype="Number">
+                <input name="data.combat-abilities.armour.value" type="text"
+                    value="{{data.combat-abilities.armour.value}}" data-dtype="Number">
             </div>
             <div class="toughness">
                 <b>Toughness</b>
-                <input class="invisible-value" name="data.combat-abilities.toughness.value" type="text" value="{{data.combat-abilities.toughness.value}}" data-dtype="Number">
-                <input class="toughness-max" name="data.combat-abilities.toughness.max" type="text" value="{{data.combat-abilities.toughness.max}}" data-dtype="Number">
+                <input class="invisible-value" name="data.combat-abilities.toughness.value" type="text"
+                    value="{{data.combat-abilities.toughness.value}}" data-dtype="Number">
+                <input class="toughness-max" name="data.combat-abilities.toughness.max" type="text"
+                    value="{{data.combat-abilities.toughness.max}}" data-dtype="Number">
             </div>
             <div class="wounds">
                 <b>Wounds</b>
-                <input class="invisible-value" name="data.wounds.value" type="text" value="{{data.wounds.value}}" data-dtype="Number">
-                <input class="wounds-max" name="data.wounds.max" type="text" value="{{data.wounds.max}}" data-dtype="Number">
+                <input class="invisible-value" name="data.wounds.value" type="text" value="{{data.wounds.value}}"
+                    data-dtype="Number">
+                <input class="wounds-max" name="data.wounds.max" type="text" value="{{data.wounds.max}}"
+                    data-dtype="Number">
             </div>
             <div class="mettle">
                 <b>Mettle</b>
-                <input class="invisible-value" name="data.combat-abilities.mettle.value" type="text" value="{{data.combat-abilities.mettle.value}}" data-dtype="Number">
-                <input class="mettle-max" name="data.combat-abilities.mettle.max" type="text" value="{{data.combat-abilities.mettle.max}}" data-dtype="Number">
+                <input class="invisible-value" name="data.combat-abilities.mettle.value" type="text"
+                    value="{{data.combat-abilities.mettle.value}}" data-dtype="Number">
+                <input class="mettle-max" name="data.combat-abilities.mettle.max" type="text"
+                    value="{{data.combat-abilities.mettle.max}}" data-dtype="Number">
             </div>
         </div>
         <div class="wrapper left">
@@ -85,20 +93,21 @@
             <div class="header">
                 <b>TRAITS</b>
                 <div class="item-controls">
-                    <a class="item-control item-create" title="Add Trait" data-type="trait"><i class="fas fa-plus"></i></a>
+                    <a class="item-control item-create" title="Add Trait" data-type="trait"><i
+                            class="fas fa-plus"></i></a>
                 </div>
             </div>
             <div class="traits scrollable">
                 {{#each actor.items as |item|}}
-                    {{#if item.isTrait}}
-                    <div class="trait item" data-item-id="{{item._id}}">
-                        <b class="name">{{item.name}}</b>
-                        <div class="item-controls">
-                            <a class="item-control item-edit" title="Edit Trait"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete" title="Delete Trait"><i class="fas fa-trash"></i></a>
-                        </div>
+                {{#if item.isTrait}}
+                <div class="trait item" data-item-id="{{item._id}}">
+                    <b class="name">{{item.name}}</b>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Trait"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Trait"><i class="fas fa-trash"></i></a>
                     </div>
-                    <div class="description">{{item.data.description}}</div>
+                </div>
+                <div class="description">{{item.data.description}}</div>
                 {{/if}}
                 {{/each}}
             </div>
@@ -107,20 +116,21 @@
             <div class="header">
                 <b>ATTACKS</b>
                 <div class="item-controls">
-                    <a class="item-control item-create" title="Add Attack" data-type="attack"><i class="fas fa-plus"></i></a>
+                    <a class="item-control item-create" title="Add Attack" data-type="attack"><i
+                            class="fas fa-plus"></i></a>
                 </div>
             </div>
             <div class="attacks scrollable">
                 {{#each actor.items as |item|}}
-                    {{#if item.isAttack}}
-                    <div class="attack item" data-item-id="{{item._id}}">
-                        <b class="name">{{item.name}}</b>
-                        <div class="item-controls">
-                            <a class="item-control item-edit" title="Edit Attack"><i class="fas fa-edit"></i></a>
-                            <a class="item-control item-delete" title="Delete Attack"><i class="fas fa-trash"></i></a>
-                        </div>
+                {{#if item.isAttack}}
+                <div class="attack item" data-item-id="{{item._id}}">
+                    <b class="name">{{item.name}}</b>
+                    <div class="item-controls">
+                        <a class="item-control item-edit" title="Edit Attack"><i class="fas fa-edit"></i></a>
+                        <a class="item-control item-delete" title="Delete Attack"><i class="fas fa-trash"></i></a>
                     </div>
-                    <div class="description">{{item.data.description}}</div>
+                </div>
+                <div class="description">{{item.data.description}}</div>
                 {{/if}}
                 {{/each}}
             </div>
