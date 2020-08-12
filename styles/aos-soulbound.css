@@ -935,7 +935,34 @@
     color: white;
 }
 
-.age-of-sigmar.sheet.actor .npc .wrapper .race {
+/* ----------------------------------------------- */
+
+.age-of-sigmar .npc .sheet-header .bio {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    border: 2px solid black;
+}
+
+.age-of-sigmar .npc .sheet-header .avatar .roll {
+    
+    padding: 2px;
+    margin-top: 10px;
+    text-align: center;
+
+}
+
+.age-of-sigmar .npc .sheet-header .avatar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 100px;
+    align-self: flex-start;
+}
+
+.age-of-sigmar.sheet.actor .npc .sheet-header .race {
     flex-basis: 76%;
 }
 
