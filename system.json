@@ -2,9 +2,9 @@
   "name": "age-of-sigmar-soulbound",
   "title": "Age of Sigmar : Soulbound",
   "description": "Perilous adventures in the mortal realms",
-  "version": 1.9,
+  "version": 1.10,
   "minimumCoreVersion": "0.5.5",
-  "compatibleCoreVersion": "0.6.4",
+  "compatibleCoreVersion": "0.6.5",
   "templateVersion": 2,
   "author": "Perfectro",
   "scripts": [],
@@ -19,6 +19,6 @@
   "url": "https://github.com/Perfectro/Age-of-Sigmar-Soulbound-FoundryVTT",
   "socket": true,
   "manifest": "https://github.com/Perfectro/Age-of-Sigmar-Soulbound-FoundryVTT/raw/master/system.json",
-  "download": "https://github.com/Perfectro/Age-of-Sigmar-Soulbound-FoundryVTT/archive/v1.9.zip",
+  "download": "https://github.com/Perfectro/Age-of-Sigmar-Soulbound-FoundryVTT/archive/v1.10.zip",
   "license": "LICENSE.txt"
 }
