@@ -589,6 +589,32 @@
 
 /* ----------------------------------------------- */
 
+.age-of-sigmar .sheet-body .goals {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.age-of-sigmar .sheet-body .goals h3 {
+    font-weight: bold;
+}
+
+.age-of-sigmar .sheet-body .goals .container {
+    min-height: 20%;
+    margin-top: 5px;
+    padding: 5px;
+    border: 2px solid black;
+}
+
+.age-of-sigmar .sheet-body .goals .editor {
+    height: 100%;
+}
+
+.age-of-sigmar .sheet-body .goals .editor-content {
+    min-height: 20px;
+}
+/* ----------------------------------------------- */
+
 .age-of-sigmar.sheet.item {
     min-width: 350px;
     min-height: 300px;
@@ -1126,23 +1152,20 @@
     flex-basis: 32%;
 }
 
-.age-of-sigmar.sheet.actor .party .wrapper .soulfire {;
+.age-of-sigmar.sheet.actor .party .wrapper .soulfire {
     align-items: center;
 }
 
-.age-of-sigmar.sheet.actor .party .wrapper .soulfire span {;
+.age-of-sigmar.sheet.actor .party .wrapper .soulfire span {
     display: flex;
     align-items: center;
 }
 
-.age-of-sigmar.sheet.actor .party .wrapper .soulfire input {;
+.age-of-sigmar.sheet.actor .party .wrapper .soulfire input {
     margin: 2px;
 }
 
-.age-of-sigmar.sheet.actor .party .wrapper.doom {
-}
-
-.age-of-sigmar.sheet.actor .party .wrapper.doom input {;
+.age-of-sigmar.sheet.actor .party .wrapper.doom input {
     margin: 2px;
 }
 
