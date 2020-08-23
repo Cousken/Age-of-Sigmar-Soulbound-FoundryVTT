@@ -4,7 +4,7 @@ export class AoSActorSheetParty extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["age-of-sigmar", "sheet", "actor", "party"],
-            template: "systems/age-of-sigmar-soulbound/templates/aos-actor-sheet-party.html",
+            template: "systems/age-of-sigmar-soulbound-enhanced/templates/aos-actor-sheet-party.html",
             width: 578,
             height: 600
         });
@@ -13,6 +13,7 @@ export class AoSActorSheetParty extends ActorSheet {
     /** @override */
     getData() {
         const data = super.getData();
+        this.computeActors(game.data);
         this.computeItems(data);
         return data;
     }
@@ -41,6 +42,12 @@ export class AoSActorSheetParty extends ActorSheet {
             item.isRumour = item.type === 'rumour';
             item.isFear = item.type === 'fear';
             item.isThreat = item.type === 'threat';
+        }
+    }
+
+    computeActors(data) {
+        for (let actor of Object.values(data.actors)) {
+            actor.isCharacter = actor.type === 'character';
         }
     }
 

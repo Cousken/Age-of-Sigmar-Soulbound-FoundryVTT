@@ -2,11 +2,12 @@ export class AosActorSheetCharacter extends ActorSheet {
 
     /** @override */
     static get defaultOptions() {
+        console.log("Current path:" + window.location.pathname);
         return mergeObject(super.defaultOptions, {
             classes: ["age-of-sigmar", "sheet", "actor"],
-            template: "systems/age-of-sigmar-soulbound/templates/aos-actor-sheet-character.html",
+            template: "systems/age-of-sigmar-soulbound-enhanced/templates/aos-actor-sheet-character.html",
             width: 578,
-            height: 757,
+            height: 775,
             tabs: [{navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description"}]
         });
     }

@@ -4,7 +4,7 @@ export class AoSActorSheetNpc extends ActorSheet {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["age-of-sigmar", "sheet", "actor"],
-            template: "systems/age-of-sigmar-soulbound/templates/aos-actor-sheet-npc.html",
+            template: "systems/age-of-sigmar-soulbound-enhanced/templates/aos-actor-sheet-npc.html",
             width: 578,
             height: 780
         });

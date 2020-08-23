@@ -1,5 +1,4 @@
-.age-of-sigmar {
-}
+.age-of-sigmar {}
 
 .age-of-sigmar.sheet.actor {
     min-width: 578px;
@@ -220,6 +219,15 @@
 
 .age-of-sigmar .sheet-body .main .skill input {
     width: 30px;
+}
+
+.age-of-sigmar .sheet-body .main .main-button .button-roll-selected {
+    padding: 5px;
+    border: 2px solid black;
+    margin-top: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
 }
 
 /* ----------------------------------------------- */
